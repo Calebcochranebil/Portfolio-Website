@@ -6,12 +6,14 @@ body {
   line-height: 2;
   /* Sets the line-height to 2 */
   text-align: center;
+  background-color: #b6c199;
+  font-
 }
 
 :root {
-  --primary-color: #357b70;
-  --secondary-color: #e0b354;
-  --dark-grey: #2b2b2b;
+  --primary-color: #703f37;
+  --secondary-color: #703f37;
+  --dark-grey: #703f37;
 }
 a {
   color: var(--primary-color);
@@ -20,20 +22,24 @@ a {
   h1 {
     font-size: 30px;
     font-weight: 700;
+    color: #000000;
   }
     
   h2 {
     font-size: 24px;
     font-weight: 700;
+    color: #000000;
   }
     
   h3 {
     font-size: 18px;
     font-weight: 700;
+    color: #703f37;
   }
   p { 
     font-size: 14px;
     font-weight: 700;
+    color: #703f37;
   }
 
   a:hover, a:focus {
@@ -42,12 +48,12 @@ a {
   }
   a:visited {
     /* visited link */
-    color: #000000;
+    color: #7d94b5;
   }
 
 a:active {
   /* selected link */
-  color: #000000d2;
+  color: #c8b7a6;
 }
 
 button {
@@ -56,7 +62,7 @@ button {
   /* takes the font from the outer container */
   font-family: inherit;
   /* styles the background color, font color, and text decoration (underline, etc.) of the button */
-  background-color: #818686;
+  background-color: #b6c199;
   color: white;
   text-decoration: none;
   /*adds spacing to the button (this will be discussed more in-depth later) */
@@ -155,20 +161,45 @@ table.table-center {
   text-align: center;
 }
 
-
 @media all and (max-width: 750px){
   /* shared code */
 }
+
 @media all and (max-width: 500px) {
   .grid {
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 500px) {
+  img.profile__portrait{
+    width: 100%;
+    height: 300px;
+    background-size: 100% 100%;
+}
+  img.page-header__item{
+    display: flex;
+    align-items: center;
+    width: 275px;
+  }
+}
+
+@media (max-width: 500px) {
+  .navigation-list{
+    display: inline-flex;
+    position: relative;
+    top: 50px;
+    left: -264px;
+  }
+  }
+}
+
 @media all and (min-width: 500px) and (max-width: 750px){
   .grid {
     grid-template-columns: 1fr 1fr;
   }
 }
+
 @media all and (max-width: 750px) {
   .grid {
     grid-gap: 10px;
