@@ -15,7 +15,7 @@ textarea {
 
 /* Page header styles */
 .page-header {
-    background-color: #333;
+    background-color: #c0c0c0;
     color: #fff;
     text-align: center;
     padding: 20px;
@@ -30,7 +30,7 @@ textarea {
 }
 
 .profile__portrait {
-    max-width: 200px;
+    max-width: 300px;
     border-radius: 50%;
     margin-bottom: 20px;
 }
@@ -51,7 +51,7 @@ textarea {
     top: 20px;
     right: 20px;
     padding: 10px 20px;
-    background-color: #4165b9;
+    background-color: #333;
     color: #fff;
     text-decoration: none;
     border-radius: 4px;
@@ -60,7 +60,7 @@ textarea {
 }
 
 #downloadResumeButton:hover {
-    background-color: #043f6c;
+    background-color: #434343;
 }
 
 /* Projects section styles */
@@ -157,4 +157,30 @@ textarea {
         width: 80px;
         margin: 10px;
     }
+}
+
+/* ... Your existing CSS ... */
+
+/* Animation styles */
+@keyframes scaleAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.logo-container {
+    /* Center the logo horizontally */
+    display: flex;
+    justify-content: center;
+}
+
+/* Apply animation to the logo */
+.logo {
+    animation: scaleAnimation 2s infinite;
 }
