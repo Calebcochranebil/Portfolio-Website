@@ -13,12 +13,28 @@ textarea {
     line-height: 1.6;
 }
 
-/* Page header styles */
 .page-header {
     background-color: #c0c0c0;
-    color: #fff;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px;
+}
+
+/* Styling for the header links */
+.page-header__item a {
+    color: #333;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 5px 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.page-header__item a:hover {
+    background-color: #333;
+    color: #fff;
 }
 
 /* Profile section styles */
@@ -47,9 +63,7 @@ textarea {
 
 /* "Request My Resume" button */
 #downloadResumeButton {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+    position: center;
     padding: 10px 20px;
     background-color: #333;
     color: #fff;
@@ -61,6 +75,15 @@ textarea {
 
 #downloadResumeButton:hover {
     background-color: #434343;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        2,
+        1fr
+    ); /* You can change the number to 3 for a 3-column grid */
+    gap: 20px; /* Adjust the gap between grid items */
 }
 
 /* Projects section styles */
@@ -146,6 +169,21 @@ textarea {
     margin: 20px;
 }
 
+.contact-info {
+    color: white; /* Change text color to white */
+}
+
+/* Target the links inside the contact info div */
+.contact-info a {
+    color: white; /* Change link color to white */
+    text-decoration: none; /* Remove underline from links */
+}
+
+/* Change link color on hover for contact info */
+.contact-info a:hover {
+    color: #f0f0f0; /* You can adjust the hover color */
+}
+
 /* Responsive layout for phones */
 @media screen and (max-width: 768px) {
     .project {
@@ -161,26 +199,16 @@ textarea {
 
 /* ... Your existing CSS ... */
 
-/* Animation styles */
-@keyframes scaleAnimation {
+@keyframes dropDownAnimation {
     0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
+        transform: translateY(-100%);
     }
     100% {
-        transform: scale(1);
+        transform: translateY(0);
     }
-}
-
-.logo-container {
-    /* Center the logo horizontally */
-    display: flex;
-    justify-content: center;
 }
 
 /* Apply animation to the logo */
 .logo {
-    animation: scaleAnimation 2s infinite;
+    animation: dropDownAnimation 1s forwards; /* Animation ends and stays at the final state */
 }
