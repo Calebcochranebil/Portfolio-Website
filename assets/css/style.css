@@ -1136,6 +1136,11 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 }
 
+.video-container {
+  width: 560px; /* Adjust width as needed */
+  height: 315px; /* Adjust height as needed */
+}
+
 
 
 
